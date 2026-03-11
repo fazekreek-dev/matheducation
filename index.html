@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://resources.finalsite.net/images/f_auto,q_auto/v1689877141/mooreschoolscom/emadd6nvplrnh1vsswjf/Clever-Logo.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Clever | Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #1a0b2e 0%, #361354 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            color: #fff;
+            box-sizing: border-box;
+            overflow-x: hidden
+        }
+
+
+        h1 {
+            margin: 40px 0;
+            font-size: 3em;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, .3)
+        }
+
+
+        #mW {
+            display: flex;
+            width: 300vw;
+            height: 100vh;
+            transition: transform .6s ease-in-out;
+            transform: translateX(0)
+        }
+
+
+        .screen {
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            flex-shrink: 0
+        }
+
+
+        #splash {
+            background: linear-gradient(135deg, #1a0b2e 0%, #361354 100%)
+        }
+
+
+        #splash h1 {
+            font-size: 5em;
+            color: #00b7bd;
+            text-shadow: 0 0 10px rgba(0, 183, 189, .7);
+            margin-bottom: 50px
+        }
+
+
+        #tos {
+            justify-content: flex-start;
+            padding-top: 50px;
+            background: linear-gradient(135deg, #1a0b2e 0%, #361354 100%)
+        }
+
+
+        #tosC {
+            max-width: 800px;
+            width: 100%;
+            max-height: 60vh;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, .1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, .3)
+        }
+
+
+        #tosC h2 {
+            color: #00b7bd;
+            border-bottom: 2px solid #009ea3;
+            padding-bottom: 5px;
+            margin-top: 0
+        }
+
+
+        #games {
+            padding-top: 20px;
+            justify-content: flex-start;
+            background: linear-gradient(135deg, #1a0b2e 0%, #361354 100%)
+        }
+
+
+        #games h1 {
+            margin-bottom: 20px;
+            font-size: 3em;
+            font-weight: 900;
+            background-image: linear-gradient(90deg, #ff6a00 0%, #00b7bd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(0, 183, 189, .5);
+            transition: none
+        }
+
+
+        .g-btns {
+            max-width: 95%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px
+        }
+
+
+        .g-btns button {
+            width: 15vw;
+            height: 15vw;
+            max-width: 140px;
+            max-height: 140px;
+            padding: 0;
+            cursor: pointer;
+            border: 4px solid #009ea3;
+            background-color: #1a0b2e;
+            color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, .4);
+            transition: all .2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden
+        }
+
+
+        .g-btns button:hover {
+            border-color: #00b7bd;
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, .5)
+        }
+
+
+        .g-btns img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+            pointer-events: none
+        }
+
+
+        #tS {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1a0b2e;
+            display: flex;
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column
+        }
+
+
+        #tS div {
+            opacity: 0;
+            position: absolute
+        }
+
+
+        #t1 {
+            font-size: 5em;
+            font-weight: 900;
+            color: #00b7bd;
+            text-shadow: 0 0 20px rgba(0, 183, 189, .9);
+            animation: cyberPlay 6s ease-in-out forwards
+        }
+
+
+        @keyframes cyberPlay {
+            0% { opacity: 0; transform: scale(.5) translateY(50px) }
+            5% { opacity: 1; transform: scale(1) translateY(0) }
+            45% { opacity: 1; transform: scale(1) translateY(0) }
+            50% { opacity: 0; transform: scale(1.5) translateY(-50px) }
+            100% { opacity: 0 }
+        }
+
+
+        #t2 {
+            animation: byAydann 6s ease-in-out forwards;
+            font-size: 3em
+        }
+
+
+        #t2 .by {
+            font-size: .5em;
+            font-weight: 300;
+            color: #fff;
+            margin-right: 10px
+        }
+
+
+        #t2 .name {
+            font-weight: 800;
+            background-image: linear-gradient(45deg, #ff6a00, #ff00b7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 8px rgba(255, 106, 0, .5)
+        }
+
+
+        @keyframes byAydann {
+            0% { opacity: 0 }
+            50% { opacity: 0 }
+            55% { opacity: 1; transform: scale(1) }
+            95% { opacity: 1; transform: scale(1) }
+            100% { opacity: 0 }
+        }
+
+
+        #gSM {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1a0b2e;
+            z-index: 999;
+            align-items: center;
+            justify-content: center
+        }
+
+
+        #gST {
+            font-size: 3em;
+            opacity: 0;
+            animation: gameLoadText 3s forwards
+        }
+
+
+        @keyframes gameLoadText {
+            0% { opacity: 0; transform: scale(.8) }
+            10% { opacity: 1; transform: scale(1.05) }
+            90% { opacity: 1; transform: scale(1) }
+            100% { opacity: 0; transform: scale(1.2) }
+        }
+
+
+        #gST .boring {
+            font-weight: 300;
+            color: #ddd;
+            margin-right: 10px
+        }
+
+
+        #gST .cool {
+            font-weight: 900;
+            background-image: linear-gradient(45deg, #ff6a00, #00b7bd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(0, 183, 189, .5)
+        }
+
+
+        #gD {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 95vw;
+            height: 95vh;
+            max-width: 1200px;
+            max-height: 800px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+            z-index: 1000;
+            overflow: hidden
+        }
+
+
+        .mH {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            background: #f9f9f9;
+            border-bottom: 1px solid #eee;
+            gap: 10px
+        }
+
+
+        #close {
+            background-color: transparent;
+            color: #d9534f;
+            border: 2px solid #d9534f;
+            padding: 5px 15px;
+            cursor: pointer;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all .2s
+        }
+
+
+        #close:hover {
+            background-color: #d9534f;
+            color: #fff
+        }
+
+
+        #fsBtn {
+            background-color: transparent;
+            color: #009ea3;
+            border: 2px solid #009ea3;
+            padding: 5px 15px;
+            cursor: pointer;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all .2s;
+            display: none
+        }
+
+
+        #fsBtn:hover {
+            background-color: #009ea3;
+            color: #fff
+        }
+
+
+        #iC {
+            position: relative;
+            height: calc(100% - 50px);
+            width: 100%;
+            background: #eee
+        }
+
+
+        #loading {
+            font-size: 24px;
+            color: #555;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            font-weight: 700
+        }
+
+
+        #gI {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: relative;
+            z-index: 10;
+            background: #fff
+        }
+
+
+        #pM {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            background: #1a0b2e;
+            border: 3px solid #00b7bd;
+            border-radius: 10px;
+            z-index: 1001;
+            box-shadow: 0 0 20px rgba(0, 183, 189, .5)
+        }
+
+
+        #pM input {
+            padding: 10px;
+            font-size: 1.2em;
+            border: 2px solid #009ea3;
+            background: #0b0615;
+            color: #00b7bd;
+            border-radius: 5px;
+            margin-right: 10px
+        }
+
+
+        #pM button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #009ea3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color .2s
+        }
+
+
+        #pM button:hover {
+            background-color: #00b7bd
+        }
+
+
+        #pE {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(150, 0, 0, .9);
+            z-index: 1002;
+            align-items: center;
+            justify-content: center
+        }
+
+
+        #pE p {
+            font-size: 3em;
+            font-weight: 900;
+            color: #f00;
+            text-shadow: 0 0 10px #ff6a00;
+            border: 3px solid #f00;
+            padding: 20px;
+            border-radius: 10px;
+            animation: errorPulse .5s infinite alternate
+        }
+
+
+        @keyframes errorPulse {
+            from { transform: scale(1); opacity: 1 }
+            to { transform: scale(1.05); opacity: .8 }
+        }
+
+
+        #sM {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background: #1a0b2e;
+            border: 3px solid #00b7bd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: left;
+            z-index: 1003;
+            box-shadow: 0 0 15px rgba(0, 183, 189, .7);
+            animation: popIn .5s cubic-bezier(.68, -.55, .27, 1.55) forwards
+        }
+
+
+        @keyframes popIn {
+            from { opacity: 0; transform: translateY(100%) }
+            to { opacity: 1; transform: translateY(0) }
+        }
+
+
+        #sM h3 {
+            color: #00b7bd;
+            margin-top: 0;
+            border-bottom: 1px solid #009ea3;
+            padding-bottom: 5px
+        }
+
+
+        #sM p {
+            font-size: .9em;
+            line-height: 1.4
+        }
+
+
+        #mO {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .6);
+            z-index: 999;
+            backdrop-filter: blur(3px)
+        }
+
+
+        #tU {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 1);
+            z-index: 1004;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; 
+            gap: 20px;
+        }
+
+
+        #tU p {
+            font-size: 5em;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 0 15px #ff0000;
+            animation: pulseRed 1s infinite alternate;
+            margin-bottom: 0;
+        }
+
+
+        #addTimeBtn {
+            background-color: #00b7bd;
+            color: #1a0b2e;
+            border: 3px solid #009ea3;
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 1.5em;
+            transition: all .2s;
+            box-shadow: 0 5px 15px rgba(0, 183, 189, 0.5);
+            margin-top: 20px;
+            z-index: 1005;
+        }
+
+
+        #addTimeBtn:hover {
+            background-color: #009ea3;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+
+        @keyframes pulseRed {
+            from { transform: scale(1); opacity: 1 }
+            to { transform: scale(1.1); opacity: .8 }
+        }
+
+
+        #tD {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1em;
+            font-weight: 700;
+            color: #fff;
+            background: rgba(0, 0, 0, .7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: 20;
+            box-shadow: 0 0 5px #00ffaa
+        }
+
+
+        #mathChallenge {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            background: #1a0b2e;
+            border: 5px solid #ff6a00;
+            border-radius: 15px;
+            z-index: 1005;
+            box-shadow: 0 0 30px rgba(255, 106, 0, .8);
+            text-align: center;
+            color: #fff;
+            width: 90%;
+            max-width: 400px;
+        }
+        #mathChallenge h3 { color: #ff6a00; font-size: 1.8em; margin-top: 0; }
+        #mathProblem { font-size: 1.5em; margin: 20px 0; font-weight: bold; }
+        #mathInput {
+            padding: 10px;
+            font-size: 1.2em;
+            border: 2px solid #ff6a00;
+            background: #0b0615;
+            color: #ffeb3b;
+            border-radius: 5px;
+            width: 80%;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        #mathSubmit {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #00b7bd;
+            color: #1a0b2e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color .2s;
+            font-weight: bold;
+        }
+        #mathSubmit:hover { background-color: #009ea3; }
+
+
+        #mathFeedback {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10em;
+            font-weight: 900;
+            z-index: 1006;
+            animation: fadeOut 2s forwards;
+            pointer-events: none;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
+        }
+                /* HIDE DEFAULT MOUSE */
+        *, body, a, button, input, iframe, .g-btns button {
+            cursor: none !important;
+        }
+
+
+        /* THE FOLLOWER CIRCLE */
+        #cursor {
+            --accent: #00b7bd;
+            position: fixed; 
+            width: 18px; 
+            height: 18px;
+            border: 2px solid var(--accent); 
+            border-radius: 50%;
+            pointer-events: none; 
+            z-index: 10001;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s, border-color 0.2s;
+            mix-blend-mode: screen;
+            left: -100px;
+        }
+        #cursor.boosting { 
+            border-color: #ff6a00; 
+            transform: translate(-50%, -50%) scale(1.5); 
+        }
+        #cursor::after {
+            content: ''; 
+            position: absolute; 
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4px; height: 4px;
+            background: var(--accent); 
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- ADD THIS LINE HERE -->
+    <div id="cursor"></div>
+
+
+    <div id="mW">
+        <div id="splash" class="screen">
+
+
+            <h1>Also Rashon and Zakyi</h1>
+        </div>
+        <div id="tos" class="screen">
+            <h2>Terms of Service (3-Second View)</h2>
+            <div id="tosC">
+                <h2>Terms of Service (TOS) Summary</h2>
+                <p>By using this site, you agree to:</p>
+                <ul>
+                    <li>Use the site responsibly.</li>
+                    <li>Not attempt to hack or abuse the system.</li>
+                    <li>Follow your school/workplace rules.</li>
+                    <li>Accept that we are not liable for external links or game bugs.</li>
+                    <li><strong><a href="https://docs.google.com/document/d/1pdlegVkdPXeaKnc1c5iI0QzsChObgWSo-KDBlUuyrSY/edit?usp=drivesdk" target="_blank" style="color:#00ffaa;">Click here for the full Terms of Service document.</a></strong></li>
+                </ul>
+                <p style="margin-top:20px;font-size:0.9em;">Last updated: **Dec 12, 2025**.</p>
+            </div>
+            <div class="t-btns"></div>
+        </div>
+        <div id="games" class="screen">
+            <h1 style="color:#00b7bd;background-image:linear-gradient(90deg,#ff6a00 0%,#00b7bd 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 10px rgba(0,183,189,.5);">CyberPlay Hub</h1>
+            <div class="g-btns" id="bC"></div>
+            <p style="margin-top:30px;font-size:2em;font-weight:900;color:#000;background:#ffeb3b;padding:15px 20px;cursor:pointer;border-radius:10px;text-decoration:none" onclick="window.open('https://docs.google.com/document/d/1pdlegVkdPXeaKnc1c5iI0QzsChObgWSo-KDBlUuyrSY/edit?usp=drivesdk','_blank')">By accessing or using our platform, you enter into a legally binding agreement governed by these Terms of Service</p>
+        </div>
+    </div>
+    <div id="tS">
+        <div id="t1">CyberPlay</div>
+        <div id="t2"><span class="by">By</span> <span class="name">Aydann. P</span></div>
+    </div>
+    <div id="gSM">
+        <div id="gST"><span class="boring">Site made by</span> <span class="cool">Aydann. P</span></div>
+    </div>
+    <div id="pE">
+        <p id="eT">YOU CANNOT ENTER (REASON: Password Incorrect)</p>
+    </div>
+    <div id="mO"></div>
+    <div id="pM">
+        <p style="margin-top:0">Enter Game Password:</p>
+        <input type="password" id="pI" placeholder="Password"><button onclick="cP()">Enter</button>
+    </div>
+    <div id="gD">
+        <div class="mH">
+            <button id="fsBtn" onclick="rFS()">Fullscreen ⛶</button>
+            <button id="close">Close X</button>
+        </div>
+        <div id="iC">
+            <div id="loading">Initializing...</div>
+            <iframe id="gI" allowfullscreen></iframe>
+            <div id="tD"></div>
+        </div>
+    </div>
+    
+    <div id="tU">
+        <p><b>TIME UP</b></p>
+        <button id="addTimeBtn" onclick="showMathChallenge()">Add 10 Minutes</button>
+    </div>
+    <div id="mathChallenge">
+        <h3>Solve to Extend Time</h3>
+        <p id="mathProblem"></p>
+        <input type="number" id="mathInput" placeholder="Your Answer" onkeypress="checkMathEnter(event)">
+        <button id="mathSubmit" onclick="checkMathAnswer()">Submit</button>
+    </div>
+    <div id="mathFeedback"></div>
+
+
+    <div id="sM">
+        <h3>Spokesperson</h3>
+        <p id="sT">In CyberPlay, preview mode is the only mode you can access because you do not have the necessary authorization or permissions to play the full version of the game, meaning certain features, levels, and content are restricted, and this limited mode allows you to experience a preview of the gameplay without granting full access.</p>
+    </div>
+
+
+    <script>
+        const C1=[20.333333333333332,25.333333333333332,15,15],PV="Preview",SP1="In CyberPlay, preview mode is the only mode you can access because you do not have the necessary authorization or permissions to play the full version of the game, meaning certain features, levels, and content are restricted, and this limited mode allows you to experience a preview of the gameplay without granting full access.",PP="RashP",SP2="Rashon Parker You have access to these 2 added buttons enjoy little bro",RP="RageBait",RU="https://fnaf-2.io/",TDMS=180000,EXTRA_TIME=600000,WH="https://discord.com/api/webhooks/1216516017937842287/4blG3SqjZDqnf0h11eeLyk3j0Ons3IKOn1Hj0G98jKqN28WWBzFi1oPjYUQhecsQFbVN",JGU="https://static.wikia.nocookie.net/fnaf-one-info/images/8/8c/Bonnie_jumpscare.gif/revision/latest/scale-to-width-down/560?cb=20240219053344";
+        
+        const GL=[{n:"OG",u:"bruh.html",i:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2zl2A4Dclo_RsuJKpdzFbbEEeX65DPe44dg&s",R:!1,isNav:!0},{n:"Fnaf(and more)",u:"https://fnaf-2.io/",i:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-hg7vSO53_0CBIy_uqOzklnMtD_KCOh1Jvw&s",R:!1,isFnaf:!0},{n:"Zakyi",u:"https://playtropolis.com/",i:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQsuWDfOVGuGaRxUTBAUx4odHNanetZimRNw&s",R:!1,isFnaf:!0},{n:"Eaglercraft",u:"https://eaglercraft.q13x.com/",i:"https://upload.wikimedia.org/wikipedia/en/b/b6/Minecraft_2024_cover_art.png",R:!1},{n:"fnf",u:"https://fridaynightfunkin-fnf.com/mods/",i:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg4KtLqndclhNSQrTv24EQ5U90sqIcMNP0WA&s",R:!1},{n:"1v1 lol",u:"https://gnhustgames.github.io/1v1lol/",i:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbNIk0_1BUzkjFzy-Juh4xYyPCDVgKdN5OrdIdSi2EmA&s=10",R:!1},{n:"SoundBoard",u:"https://www.myinstants.com/en/index/us/",i:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-AboHuFvkadvsK0VIttFU-yLRBIwBm13iiw&s",R:!1},{n:"HenryStickMan",u:"https://play.gilect.com/game?title=stealingthediamond",i:"https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/henrystickminseries.jpg",R:!1},{n:"Geometry Dash (playable but sucks)",u:"https://geometrydash-lite.io/",i:"https://assets-prd.ignimgs.com/2021/12/14/geometrydash-1639510868467.jpg",R:!1},{n:"Unblocked(And others)",u:"https://www.hahagames.com/",i:"https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/z1wbqyg9coauxwdx8vq1?ik-sanitizeSvg=true",R:!1},{n:"little bro game",u:"https://nevercap.ai/resources/youtube-to-mp4",i:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2PtEc51fbu-QM47BEPR5pvVgHhKc1TGFM0w&s",R:!0},{n:"Here -_-",u:"data:text/html,<a href='sandbox:/mnt/data/GROX_IGHT_BET.mp3' download>Click to Download MP3</a>",i:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp1web7XUmGSVZOPfmjfguTbsi4c0GaNAFMQ&s",R:!0},{n:"Add game ➕",u:"#urlprompt",i:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqSz5LAGhX4rkuqCG3SZ6ILZwDGZPT6mJ5Q&s",R:!1},{n:"RASHON",u:RU,i:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQjcgr6UwGGINf3j-4z6RNFmIriDEfv_ROig&s?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=yySgfIYEwJwQ7kNvwENOMUI&_nc_oc=AdmWBAuAXI3jNuwQ2WP2w_ayUFtDf5xWsNp726jRN46b62DonhD-S5OOE56dsJBCEeNSxpjcoVExScwvP9AFReH2&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=XRSFCjB3LY2G5L_Q6J36Wg&oh=00_Afn7f4S9HH-2-3R2uyw08NkEwMvMpkYzVIiB1Im2wWjSLQ&oe=694B9926",R:!0,isRashonButton:!0}];
+        
+        let AC,CU="",isPreview=!1,isFull=!1,isRashP=!1,isRashonMode=!1,rashonTimer=null,timerInterval=null,timerEndTime=0,mathAnswer=0;
+        const gE=e=>document.getElementById(e),MW=gE("mW"),TS=gE("tS"),BC=gE("bC"),GD=gE("gD"),MO=gE("mO"),GI=gE("gI"),LD=gE("loading"),CL=gE("close"),GSM=gE("gSM"),GST=gE("gST"),PMO=gE("pM"),PII=gE("pI"),PER=gE("pE"),PET=gE("eT"),SMO=gE("sM"),SPT=gE("sT"),FSB=gE("fsBtn"),T1D=gE("t1"),T2D=gE("t2"),TUM=gE("tU"),TDR=gE("tD"),MC=gE("mathChallenge"),MP=gE("mathProblem"),MI=gE("mathInput"),MF=gE("mathFeedback");
+        
+        function dP(e){let t="";return e.forEach(o=>t+=String.fromCharCode(o*3+4)),t}
+        const FPA=dP(C1),GAM="GAP ALERT. GAP ALERT.";
+
+
+        function sW(e){if('speechSynthesis'in window){const t=new SpeechSynthesisUtterance(e);t.rate=1.2,t.pitch=1.1,window.speechSynthesis.speak(t)}}
+        function sS(e){'speechSynthesis'in window&&speechSynthesis.speak(new SpeechSynthesisUtterance(e))}
+        
+        function pT(e){
+            if(!AC)AC=new(window.AudioContext||webkitAudioContext);
+            const t=AC.createOscillator(),o=AC.createGain(),n=AC.currentTime;
+            t.connect(o),o.connect(AC.destination),t.type=e,t.frequency.setValueAtTime(800,n),o.gain.setValueAtTime(1,n),o.gain.exponentialRampToValueAtTime(.001,n+.05),t.start(n),t.stop(n+.05)
+        }
+        function pClick(){pT("square")}
+        function pSuccess(){if(!AC)AC=new(window.AudioContext||webkitAudioContext);const e=AC.currentTime,t=.5,o=AC.createOscillator(),n=AC.createGain(),d=AC.createBiquadFilter();o.type="sawtooth",n.gain.setValueAtTime(0,e),n.gain.linearRampToValueAtTime(1,e+.05),n.gain.linearRampToValueAtTime(0,e+t),d.type="lowpass",d.frequency.setValueAtTime(100,e),d.frequency.exponentialRampToValueAtTime(5e3,e+t),o.connect(d),d.connect(n),n.connect(AC.destination),o.start(e),o.stop(e+t)}
+        function pSwishOut(){if(!AC)AC=new(window.AudioContext||webkitAudioContext);const e=AC.currentTime,t=.5,o=AC.createOscillator(),n=AC.createGain(),d=AC.createBiquadFilter();o.type="sawtooth",n.gain.setValueAtTime(1,e),n.gain.linearRampToValueAtTime(0,e+t),d.type="lowpass",d.frequency.setValueAtTime(6e3,e),d.frequency.exponentialRampToValueAtTime(100,e+t),o.connect(d),d.connect(n),n.connect(AC.destination),o.start(e),o.stop(e+t)}
+        function pError(){if(!AC)AC=new(window.AudioContext||webkitAudioContext);const e=AC.currentTime,t=.4,o=AC.createOscillator(),n=AC.createGain();o.type="triangle",n.connect(AC.destination),o.connect(n),o.frequency.setValueAtTime(150,e),n.gain.setValueAtTime(1,e),n.gain.exponentialRampToValueAtTime(.5,e+.2),n.gain.exponentialRampToValueAtTime(.001,e+t),o.start(e),o.stop(e+t)}
+        function pCorrect(){if(!AC)AC=new(window.AudioContext||webkitAudioContext);const e=AC.currentTime,t=.3,o=523.25,n=783.99;function d(e,t,o){const n=AC.createOscillator(),d=AC.createGain();n.connect(d),d.connect(AC.destination),n.type="sine",n.frequency.setValueAtTime(e,t),d.gain.setValueAtTime(.5,t),d.gain.exponentialRampToValueAtTime(.001,o),n.start(t),n.stop(o)}d(o,e,e+t),d(n,e+.05,e+t+.05)}
+        function pAlarm(){if(!AC)AC=new(window.AudioContext||webkitAudioContext);const e=AC.currentTime,t=3,o=.5;for(let i=0;i<t/o;i++){setTimeout(()=>new Audio("https://www.myinstants.com/media/sounds/wrong-answer-buzzer.mp3").play(),i*o*1000)}}
+        function makeDistortionCurve(e){var t="number"==typeof e?e:50,o=44100,n=new Float32Array(o),a=Math.PI/180;for(var i=0;i<o;++i){var c=2*i/o-1;n[i]=(3+t)*c*20*a/(Math.PI+t*Math.abs(c))}return n}
+        function pDigitalScream(){if(!AC)AC=new(window.AudioContext||webkitAudioContext);const e=AC.currentTime,t=2,o=AC.createWaveShaper();o.curve=makeDistortionCurve(600),o.oversample="4x";const n=AC.sampleRate*t,a=AC.createBuffer(1,n,AC.sampleRate),i=a.getChannelData(0);for(let e=0;e<n;e++)i[e]=2*Math.random()-1;const c=AC.createBufferSource();c.buffer=a;const r=AC.createBiquadFilter();r.type="lowpass",r.frequency.setValueAtTime(500,e),r.Q.setValueAtTime(10,e);const s=AC.createGain();s.gain.setValueAtTime(1,e),s.gain.exponentialRampToValueAtTime(.001,e+t),c.connect(r),r.connect(o),o.connect(s),s.connect(AC.destination),c.start(e),c.stop(e+t)}
+        
+        function pJS(){pDigitalScream(),TUM.style.display="flex",TUM.style.backgroundImage=`url('${JGU}')`,TUM.style.backgroundSize="cover",TUM.style.backgroundPosition="center"} 
+        
+        function sAG(){const s=()=>new Audio("https://www.myinstants.com/media/sounds/instant-click.mp3").play();s(),PMO.style.display="none",MO.style.display="none";const e=prompt("What games should I add?");if(e){fetch(WH,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({content:"**Game Suggestion:** "+e,username:"CyberPlay Hub Bot"})}).then(t=>{s(),alert(t.ok?"Suggestion sent! Thanks.":"Failed to send suggestion.")}).catch(e=>{s(),alert("Error sending suggestion: "+e.message)})}else s()}
+
+
+        function promptAndLoadURL(){pClick();if(isPreview)return pError(),PET.textContent="UNAVAILABLE (REASON: IN PREVIEW MODE)",PER.style.display="flex",MO.style.display="block",setTimeout(()=>{PER.style.display="none",MO.style.display="none"},2000),void sD1();const e=prompt("Input URL:");if(e){if(e.startsWith('http://')||e.startsWith('https://')||e.startsWith('data:'))pCorrect(),sGS(e);else pError(),alert("Invalid URL format. Please include http://, https://, or a data: URI.")}else pError()}
+
+
+        function rFS(){GI.requestFullscreen?GI.requestFullscreen():GI.mozRequestFullScreen?GI.mozRequestFullScreen():GI.webkitRequestFullscreen?GI.webkitRequestFullscreen():GI.msRequestFullscreen&&GI.msRequestFullscreen}
+        function sTOS(){MW.style.transform="translateX(-100vw)",setTimeout(aA,3000)}
+        function aA(){pSuccess(),MW.style.transition="transform .6s ease-in-out",MW.style.transform="translateX(-200vw)"}
+        function sD1(){sS(SP1),SMO.style.display="block",setTimeout(()=>{SMO.style.display="none"},12e3)}
+        function sD2(){sS(SP2),SMO.style.display="block",SPT.textContent=SP2,setTimeout(()=>{SMO.style.display="none",SPT.textContent=SP1},12e3)}
+        
+        function sRT(remainingTime=0){
+            clearInterval(timerInterval);
+            if (remainingTime > 0) { timerEndTime = Date.now() + remainingTime; } else { timerEndTime = Date.now() + TDMS; }
+            function t(){
+                const s=timerEndTime-Date.now();
+                if(s<=0){ cG(),pJS(),clearInterval(timerInterval),rashonTimer=null; return; }
+                const o=Math.floor(s/6e4),n=Math.floor(s%6e4/1e3);
+                TDR.textContent=`Time Remaining: ${o}:${n<10?"0":""}${n}`
+            }
+            timerInterval=setInterval(t,1e3);
+            t();
+        }
+        
+        function sPM(e,t,s=!1,nav=!1){
+            if(e==="https://playtropolis.com/"){CU=e;MO.style.display="block";PMO.style.display="block";PII.value="";PII.focus();return;}
+            if(nav) { window.location.href = e; return; }
+            if (e === "#urlprompt") { return promptAndLoadURL(); }
+            CU=e;
+            if(isPreview)return pError(),PET.textContent="UNAVAILABLE (REASON: IN PREVIEW MODE)",PER.style.display="flex",MO.style.display="block",setTimeout(()=>{PER.style.display="none",MO.style.display="none"},2000),void sD1();
+            if(isFull){
+                if(isRashonMode&&!s)return pError(),PET.textContent="UNAVAILABLE (Reason: Only Fnaf is allowed in RASHON mode)",PER.style.display="flex",MO.style.display="block",setTimeout(()=>{PER.style.display="none",MO.style.display="none"},2000),void sD1();
+                if(t||!isRashP)return void sGS(e);
+                if(isRashP&&!t)return pError(),PET.textContent="UNAVAILABLE (Reason: Not Authorized in RashP Mode)",PER.style.display="flex",MO.style.display="block",setTimeout(()=>{PER.style.display="none",MO.style.display="none"},2000),void sD1()
+            }
+            MO.style.display="block",PMO.style.display="block",PII.value="",PII.focus()
+        }
+
+
+        function cP(){pClick();
+            if(CU==="https://playtropolis.com/"){if(PII.value==="BigBack"){pCorrect();PMO.style.display="none";MO.style.display="none";return void sGS(CU);}else{return pAlarm(),PET.textContent="YOU CANNOT ENTER (REASON: Incorrect Password for Zakyi)",PER.style.display="flex",PMO.style.display="none",setTimeout(()=>{PER.style.display="none",PMO.style.display="block",PII.focus()},3000);}}
+            const isRageAttempt=CU==="";
+            if(isRageAttempt&&(PII.value.toLowerCase()===FPA.toLowerCase()||PII.value===PP||PII.value===PV))return pAlarm(),PET.textContent="YOU CANNOT ENTER (REASON: Only the RASHON password will grant access)",PER.style.display="flex",PMO.style.display="none",setTimeout(()=>{PER.style.display="none",PMO.style.display="block",PII.focus()},3000);
+            if(PII.value.toLowerCase()===FPA.toLowerCase())return pCorrect(),PMO.style.display="none",isFull=!0,isPreview=!1,isRashP=!1,isRashonMode=!1,MO.style.display="none",alert("Full Access Granted."),void sGS(CU);
+            if(PII.value===PP)return pCorrect(),PMO.style.display="none",isFull=!0,isPreview=!1,isRashP=!0,isRashonMode=!1,MO.style.display="none",sD2(),alert("Second Password Accepted. Restricted games unlocked."),void gGB();
+            if(PII.value===PV)return pError(),sD1(),PMO.style.display="none",isPreview=!0,isFull=!1,isRashP=!1,isRashonMode=!1,MO.style.display="none",alert("Preview Mode Activated. Click a game to see the 'Unavailable' message."),void gGB();
+            if(PII.value===RP)return sW(GAM),PMO.style.display="none",isFull=!0,isPreview=!1,isRashP=!0,isRashonMode=!0,MO.style.display="none",alert("RASHON Game Access Granted! GAP ALERT! Only Fnaf is available for 3 minutes."),void sGS(RU);
+            pAlarm(),PET.textContent="YOU CANNOT ENTER (REASON: Password Incorrect)",PER.style.display="flex",PMO.style.display="none",setTimeout(()=>{PER.style.display="none",PMO.style.display="block",PII.focus()},3000)
+        }
+
+
+        function sGS(e){MO.style.display="block",GSM.style.display="flex",GST.style.animation="none",setTimeout(()=>{GST.style.animation="gameLoadText 3s forwards"},50),setTimeout(()=>{GSM.style.display="none",sG(e)},3000)}
+        function sG(e){MO.style.display="block",GD.style.display="block",LD.style.display="block",GI.style.opacity="0",GI.src=e,GI.style.display="block",FSB.style.display="inline-block";const t=GL.find(s=>s.u===e);t&&t.isFnaf&&isRashonMode&&sRT()} 
+        function cG(){GD.style.display="none",MO.style.display="none",GI.src="",LD.style.display="block",FSB.style.display="none",TDR.textContent="",TUM.style.backgroundImage='none',TUM.style.display='none',clearTimeout(rashonTimer),clearInterval(timerInterval)} 
+        
+        function gGB(){BC.innerHTML="",GL.forEach(e=>{if(!e.R||e.R&&isFull||e.isRashonButton||e.isNav){let t=e.u,o=e.R;if(isRashonMode&&!e.isFnaf&&!e.isRashonButton&&!e.isNav)return;if(isRashonMode&&e.isFnaf)o=!0,t=RU;if(e.isRashonButton)o=!0,t="";const s=document.createElement("button"),c=document.createElement("img");c.src=e.i,c.alt=e.n,s.appendChild(c);const p=document.createElement("span");p.textContent=e.n,p.style.position="absolute",p.style.bottom="5px",p.style.fontSize="0.9em",p.style.fontWeight="bold",p.style.backgroundColor="rgba(0,0,0,0.6)",s.style.borderRadius="3px",s.appendChild(p),s.style.position="relative",s.onclick=()=>{e.isRashonButton?sPM(t,!0):sPM(t,o,e.isFnaf,e.isNav)},BC.appendChild(s)}})}
+        
+        function generateMathProblem() {
+            const a = Math.floor(Math.random() * 50) + 10;
+            const b = Math.floor(Math.random() * 50) + 10;
+            const c = Math.floor(Math.random() * 20) + 5;
+            const d = Math.floor(Math.random() * 20) + 5;
+            const e = Math.floor(Math.random() * 99) + 1;
+            const f = Math.floor(Math.random() * 99) + 1;
+            mathAnswer = (a * b) - (c * d) + e + f;
+            MP.textContent = `(${a} x ${b}) - (${c} x ${d}) + ${e} + ${f} = ?`;
+            MI.value = '';
+            MI.focus();
+        }
+
+
+        function showMathChallenge() {
+            pClick();
+            TUM.style.display = 'none'; MC.style.display = 'block'; MO.style.display = 'block'; generateMathProblem();
+        }
+
+
+        function checkMathAnswer() {
+            pClick();
+            const userAnswer = parseInt(MI.value);
+            MC.style.display = 'none'; 
+            if (userAnswer === mathAnswer) {
+                pCorrect();
+                showFeedback('✔', '#00ffaa'); 
+                timerEndTime += EXTRA_TIME; sRT(timerEndTime - Date.now()); 
+                GI.src = RU; GD.style.display="block"; MO.style.display="none";
+            } else {
+                pError();
+                showFeedback('✖', '#ff0000');
+                cG(); setTimeout(() => { pJS(); }, 2000); 
+            }
+        }
+
+
+        function checkMathEnter(event) { if (event.key === 'Enter') { checkMathAnswer(); } }
+        
+        function showFeedback(symbol, color) {
+            MF.textContent = symbol;
+            MF.style.color = color; MF.style.textShadow = `0 0 15px ${color}`;
+            MF.style.animation = 'none'; void MF.offsetWidth; MF.style.animation = 'fadeOut 2s forwards';
+        }
+
+
+                document.addEventListener("DOMContentLoaded",()=>{
+            // --- ADD THESE 6 LINES HERE ---
+            const cursorEl = document.getElementById('cursor');
+            window.addEventListener('mousemove', (e) => {
+                cursorEl.style.left = e.clientX + 'px';
+                cursorEl.style.top = e.clientY + 'px';
+            });
+            window.addEventListener('mousedown', () => cursorEl.classList.add('boosting'));
+            window.addEventListener('mouseup', () => cursorEl.classList.remove('boosting'));
+            // --- END OF ADDED LINES ---
+      
+            gGB(),CL.onclick=()=>cG(),MO.onclick=()=>{GD.style.display==="block"&&cG()},
+            PII.addEventListener("keypress",e=>{e.key==="Enter"&&cP()}),
+            MI.addEventListener("keypress",checkMathEnter),
+            GI.onload=()=>{LD.style.display="none",GI.style.opacity="1"},
+            pClick(),MW.style.transition="none",TS.style.display="flex",
+            T1D.style.animation="none",T2D.style.animation="none",
+            setTimeout(()=>{
+                T1D.style.animation="cyberPlay 6s ease-in-out forwards",
+                T2D.style.animation="byAydann 6s ease-in-out forwards"
+            },100),
+            setTimeout(pSwishOut,3000),
+            setTimeout(()=>{
+                TS.style.display="none",
+                MW.style.transition="transform .6s ease-in-out",
+                sTOS()
+            },6100)
+        })
+    </script>
+</body>
+</html>
